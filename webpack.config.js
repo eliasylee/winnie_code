@@ -4,7 +4,7 @@ module.exports = {
   context: __dirname,
   entry: "./frontend/winnie.jsx",
   output: {
-    path: './app/assets/javascripts',
+    path: './',
     filename: "bundle.js",
     devtoolModuleFilenameTemplate: '[resourcePath]',
     devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
