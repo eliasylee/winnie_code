@@ -3,8 +3,8 @@ import PinsReducer from './pins_reducer';
 import PinReducer from './pin_reducer';
 
 const RootReducer = combineReducers({
-  PinsReducer,
-  PinReducer
+  pins: PinsReducer,
+  pin: PinReducer
 });
 
 export default RootReducer;
