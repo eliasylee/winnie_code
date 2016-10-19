@@ -3,8 +3,7 @@ import { fetchOnePin } from '../../actions/pin_actions';
 import Map from './map';
 
 const mapStateToProps = (state, ownProps) => ({
-  pins: state.pins,
-  pin: state.pin
+  pins: state.pins
 });
 
 const mapDispatchToProps = dispatch => ({

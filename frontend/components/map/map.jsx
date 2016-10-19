@@ -6,18 +6,17 @@ import { withRouter } from 'react-router';
 
 class Map extends React.Component {
   componentDidMount() {
-    this.geoFindMe();
+    this.locationSuccess();
   }
 
   locationSuccess(position) {
-    let output = document.getElementById("map");
-    let latitude  = position.coords.latitude;
-    let longitude = position.coords.longitude;
+    const mapDOMNode = document.getElementById("map");
+    const mapOptions = {
+      center: {lat: 37.7758, lng: -122.435},
+      zoom: 13
+    };
 
-    let img = new Image();
-    img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
-
-    output.appendChild(img);
+    new google.maps.Map(mapDOMNode, mapOptions);
   }
 
   locationError() {
@@ -38,7 +37,7 @@ class Map extends React.Component {
 
   render() {
     return(
-      <div id="map" ref='map'></div>
+      <div id="map"></div>
     );
   }
 }
