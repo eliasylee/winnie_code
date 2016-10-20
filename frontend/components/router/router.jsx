@@ -4,10 +4,11 @@ import App from '../app';
 import MapContainer from '../map/map_container';
 
 const AppRouter = ({ store }) => {
+
   return (
     <Router history={hashHistory}>
       <Route path="/" component={App} >
-        <IndexRoute component={MapContainer} />
+        <IndexRoute component={MapContainer}/>
       </Route>
     </Router>
   );

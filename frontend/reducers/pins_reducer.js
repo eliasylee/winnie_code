@@ -7,7 +7,7 @@ const PinsReducer = (state = defaultState, action) => {
   let newState = merge({}, state);
   switch (action.type) {
     case PinConstants.RECEIVE_ALL_PINS:
-      newState = newState.merge(action.pins);
+      newState = merge(action.pins.response.groups[0].items);
       return newState;
     case PinConstants.RECEIVE_PINS_ERRORS:
       newState.errors = action.errors;

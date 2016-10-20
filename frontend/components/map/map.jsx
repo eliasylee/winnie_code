@@ -3,18 +3,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { withRouter } from 'react-router';
+import PinManager from '../../util/pin_manager';
 
 class Map extends React.Component {
+  constructor(props) {
+    super(props);
+    this.locationSuccess = this.locationSuccess.bind(this);
+  }
+
   componentDidMount() {
     this.locationSuccess();
   }
 
-  locationSuccess(position) {
+  locationSuccess() {
     const mapDOMNode = document.getElementById("map");
     const mapOptions = {
       center: {lat: 37.7758, lng: -122.435},
       zoom: 13
     };
+
+    this.props.fetchAllPins(mapOptions.center);
 
     new google.maps.Map(mapDOMNode, mapOptions);
   }

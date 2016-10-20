@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { fetchOnePin } from '../../actions/pin_actions';
+import { fetchAllPins,
+         fetchOnePin } from '../../actions/pin_actions';
 import Map from './map';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -7,6 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  fetchAllPins: loc => dispatch(fetchAllPins(loc)),
   fetchOnePin: venue => dispatch(fetchOnePin(venue))
 });
 
