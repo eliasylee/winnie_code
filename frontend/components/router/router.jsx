@@ -14,7 +14,7 @@ const AppRouter = ({ store }) => {
     <Router history={hashHistory}>
       <Route path="/" component={App} >
         <IndexRoute component={MapContainer}/>
-        <Route path="/venue/:id" component={VenueContainer} onEnter={fetchVenueInfo}/>
+        <Route path="/venue/:id" component={VenueContainer} onEnter={fetchVenueInfo} />
       </Route>
     </Router>
   );
