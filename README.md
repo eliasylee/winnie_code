@@ -2,9 +2,9 @@
 
 This repo contains a sample web application.
 
-## How to Run
+## Live Site
 
-Open index.html in a non-Chrome browser.
+[Live]: https://eliasylee.github.io/winnie_code/
 
 ## Features and Implementation
 
