@@ -4,7 +4,9 @@ This repo contains a sample web application.
 
 ## Live Site
 
-[Live][https://eliasylee.github.io/winnie_code/]
+[Live][github-pages]
+
+[github-pages]: https://eliasylee.github.io/winnie_code/
 
 ## Features and Implementation
 
