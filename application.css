@@ -57,3 +57,65 @@ body, html {
   width: 500px;
   height: 500px;
 }
+
+/* Venue */
+
+.venueOuterContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.venueInnerContainer {
+  height: 50%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.venueName {
+  font-size: 50px;
+  margin: 0px auto 10px auto;
+}
+
+.venueAddress {
+  margin-bottom: 20px;
+}
+
+.venueStatus {
+  font-weight: bold;
+  color: red;
+}
+
+.venueHours {
+  margin-bottom: 10px;
+}
+
+.venueConsensus {
+  margin-bottom: 20px;
+}
+
+.venuePrice {
+ margin-bottom: 20px;
+}
+
+.venueDescriptionBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.venueDescriptionHeader {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  margin-bottom: 5px;
+}
