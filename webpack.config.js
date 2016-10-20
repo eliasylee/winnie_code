@@ -2,9 +2,9 @@ let path = require("path");
 
 module.exports = {
   context: __dirname,
-  entry: "./frontend/winnie.jsx",
+  entry: "./docs/frontend/winnie.jsx",
   output: {
-    path: './',
+    path: './docs',
     filename: "bundle.js",
     devtoolModuleFilenameTemplate: '[resourcePath]',
     devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
