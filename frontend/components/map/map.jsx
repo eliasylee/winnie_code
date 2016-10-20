@@ -10,15 +10,30 @@ class Map extends React.Component {
   }
 
   componentDidMount() {
-    this.geoFindMe();
+    if (this.props.pos.coords) {
+      this.regrabPosAndPins();
+    } else {
+      this.geoFindMe();
+    }
+  }
+
+  regrabPosAndPins() {
+    let mapDOMNode = document.getElementById("map");
+    let mapOptions = {
+      center: {lat: this.props.pos.coords.latitude, lng: this.props.pos.coords.longitude},
+      zoom: 14
+    };
+    this.map = new google.maps.Map(mapDOMNode, mapOptions);
+    this.props.saveMapToStore(this.map);
   }
 
   locationSuccess(position) {
-    const mapDOMNode = document.getElementById("map");
-    const mapOptions = {
+    let mapDOMNode = document.getElementById("map");
+    let mapOptions = {
       center: {lat: position.coords.latitude, lng: position.coords.longitude},
-      zoom: 16
+      zoom: 14
     };
+    this.props.savePosToStore(position);
     this.props.fetchAllPins(mapOptions.center);
     this.map = new google.maps.Map(mapDOMNode, mapOptions);
     this.props.saveMapToStore(this.map);

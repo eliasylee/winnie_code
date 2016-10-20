@@ -6,12 +6,12 @@ class PinManager extends React.Component {
   componentWillReceiveProps(props) {
     if (props.pins[0]) {
       props.pins.forEach(pin => {
-        this.createMarker(pin);
+        this.createMarker(pin, props.map);
       });
     }
   }
 
-  createMarker(pin) {
+  createMarker(pin, map) {
     let markerPos = {
       lat: pin.venue.location.lat,
       lng: pin.venue.location.lng
@@ -19,7 +19,7 @@ class PinManager extends React.Component {
 
     let newMarker = new google.maps.Marker({
       position: markerPos,
-      map: this.props.map
+      map: map
     });
 
     let venueId = pin.venue.id;
