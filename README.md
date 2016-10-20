@@ -4,7 +4,7 @@ This repo contains a sample web application.
 
 ## How to Run
 
-Open index.html.
+Open index.html in a non-Chrome browser.
 
 ## Features and Implementation
 
