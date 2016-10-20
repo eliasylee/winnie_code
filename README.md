@@ -2,6 +2,10 @@
 
 This repo contains a sample web application.
 
+## How to Run
+
+Open index.html.
+
 ## Features and Implementation
 
 ### Overall
