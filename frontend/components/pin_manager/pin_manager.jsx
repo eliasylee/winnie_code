@@ -22,7 +22,7 @@ class PinManager extends React.Component {
       map: this.props.map
     });
 
-    let venueId = pin.venue.storeId;
+    let venueId = pin.venue.id;
 
     newMarker.addListener('click', () => {
       this.props.router.push(`/venue/${venueId}`);

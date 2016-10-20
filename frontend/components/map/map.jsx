@@ -10,13 +10,13 @@ class Map extends React.Component {
   }
 
   componentDidMount() {
-    this.geoFindMe();
+    this.locationSuccess();
   }
 
-  locationSuccess(position) {
+  locationSuccess() {
     const mapDOMNode = document.getElementById("map");
     const mapOptions = {
-      center: {lat: position.coords.latitude, lng: position.coords.longitude},
+      center: {lat: 37.7758, lng: -122.435},
       zoom: 13
     };
     this.props.fetchAllPins(mapOptions.center);

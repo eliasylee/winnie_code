@@ -12,7 +12,7 @@ export const fetchAllPins = (loc, success, error) => {
 export const fetchOnePin = (venue, success, error) => {
   $.ajax({
     method: 'GET',
-    url: `https://api.foursquare.com/v2/venues/${venue}`,
+    url: `https://api.foursquare.com/v2/venues/${venue}/?client_id=KB45V00TQB1PCVWOWRWQP3VPYAAB15BEG5VCZVGA3LADGA4B&client_secret=J3R4VAADPG4N4IATDCA2NVOU1Q0FQ5LQ0ZS3TBNTFM2DVKFT&v=20140806`,
     success,
     error
   });

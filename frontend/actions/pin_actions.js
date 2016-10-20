@@ -12,9 +12,9 @@ export const fetchAllPins = location => ({
   location
 });
 
-export const fetchOnePin = location => ({
+export const fetchOnePin = venue => ({
   type: PinConstants.FETCH_ONE_PIN,
-  location
+  venue
 });
 
 export const receiveAllPins = pins => ({

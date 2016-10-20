@@ -16,7 +16,7 @@ const PinsMiddleware = ({ dispatch }) => next => action => {
       fetchAllPins(action.location, fetchAllSuccess, pinsErrors);
       return next(action);
     case PinConstants.FETCH_ONE_PIN:
-      fetchOnePin(action.venu, fetchOneSuccess, pinErrors);
+      fetchOnePin(action.venue, fetchOneSuccess, pinErrors);
       return next(action);
     default:
       return next(action);

@@ -6,9 +6,10 @@ import VenueContainer from '../venue/venue_container';
 import { fetchOnePin } from '../../actions/pin_actions';
 
 const AppRouter = ({ store }) => {
-  const fetchVenueInfo = nextState {
+  const fetchVenueInfo = nextState => {
+    store.dispatch(fetchOnePin(nextState.params.id));
+  };
 
-  }
   return (
     <Router history={hashHistory}>
       <Route path="/" component={App} >
