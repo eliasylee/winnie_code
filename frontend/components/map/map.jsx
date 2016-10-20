@@ -17,7 +17,7 @@ class Map extends React.Component {
     const mapDOMNode = document.getElementById("map");
     const mapOptions = {
       center: {lat: 37.7758, lng: -122.435},
-      zoom: 13
+      zoom: 16
     };
     this.props.fetchAllPins(mapOptions.center);
     this.map = new google.maps.Map(mapDOMNode, mapOptions);
