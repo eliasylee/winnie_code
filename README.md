@@ -4,7 +4,7 @@ This repo contains a sample web application.
 
 ## Live Site
 
-[Live]: https://eliasylee.github.io/winnie_code/
+[Live][https://eliasylee.github.io/winnie_code/]
 
 ## Features and Implementation
 
@@ -14,7 +14,7 @@ The code sample is light-weight as it is served in the front-end only without a 
 
 ### Geolocation
 
-Browser geolocation is used to allow Google Maps to display at the user's location. Due to Chrome's settings, which views non-HTTPS and non-localhost sources as insecure and disallows location tracking, the code sample cannot be run in the Chrome browser.
+Browser geolocation is used to allow Google Maps to display at the user's location.
 
 ### FourSquare API
 
