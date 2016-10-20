@@ -1,9 +1,7 @@
 /* global google */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { withRouter } from 'react-router';
-import PinManager from '../../util/pin_manager';
+import PinManagerContainer from '../pin_manager/pin_manager_container';
 
 class Map extends React.Component {
   constructor(props) {
@@ -12,19 +10,18 @@ class Map extends React.Component {
   }
 
   componentDidMount() {
-    this.locationSuccess();
+    this.geoFindMe();
   }
 
-  locationSuccess() {
+  locationSuccess(position) {
     const mapDOMNode = document.getElementById("map");
     const mapOptions = {
-      center: {lat: 37.7758, lng: -122.435},
+      center: {lat: position.coords.latitude, lng: position.coords.longitude},
       zoom: 13
     };
-
     this.props.fetchAllPins(mapOptions.center);
-
-    new google.maps.Map(mapDOMNode, mapOptions);
+    this.map = new google.maps.Map(mapDOMNode, mapOptions);
+    this.props.saveMapToStore(this.map);
   }
 
   locationError() {
@@ -45,9 +42,12 @@ class Map extends React.Component {
 
   render() {
     return(
-      <div id="map"></div>
+      <div>
+        <div id="map"></div>
+        <PinManagerContainer />
+      </div>
     );
   }
 }
 
-export default withRouter(Map);
+export default Map;
