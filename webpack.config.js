@@ -2,7 +2,7 @@ let path = require("path");
 
 module.exports = {
   context: __dirname,
-  entry: "./docs/frontend/winnie.jsx",
+  entry: "./frontend/winnie.jsx",
   output: {
     path: './docs',
     filename: "bundle.js",
